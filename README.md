@@ -4,7 +4,7 @@ This README would normally document whatever steps are necessary to get your app
 
 
 	mvn tomcat7:run
-	# http://localhost:9000/artifactId/version
+	# http://localhost:9000/activiti_image_server/version
 	
 	mvn jetty:run
 	@ http://localhost:8080/version

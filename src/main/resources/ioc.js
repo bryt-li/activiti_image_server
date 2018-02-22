@@ -40,22 +40,15 @@ var ioc={
 			testOnReturn    : false,
 			filters         : "mergeStat,wall",
 			dbType			: "mysql"
-
 		}
 	},
-	//sql文件配置
-	sqlManager:{
-		type:'org.nutz.dao.impl.FileSqlManager',
-		args:['sqls']
-	},
-	//dao配置
-	dao:{
-		type:"org.nutz.dao.impl.NutDao",
-		args:[{refer:"dataSource"},{refer:"sqlManager"}]
-	},
-	//sqlTemplate配置
-	sqlTemplate:{
-		type:"org.nutz.dao.impl.sql.SqlTemplate",
-		args:[{refer:"dao"}]
+	activiti : {
+		type : "org.nutz.ioc.impl.PropertiesProxy",
+		fields : {
+			ignoreResourceNotFound : "true",
+			paths : [
+					"activiti.properties"
+			        ]
+		}
 	}
 };
