@@ -1,0 +1,10 @@
+2018-02-22 10:09:49,315 [// - ?]  [li.bryt.tools.activiti_image_server.services.ApplicationService] -init
+2018-02-22 10:09:49,367 [// - ?]  [li.bryt.tools.activiti_image_server.modules.MainModule] -return ok='{
+   "version": "0.0.1_test"
+}'
+2018-02-22 10:09:49,382 [// - ?]  [li.bryt.tools.activiti_image_server.services.ApplicationService] -destroy
+2018-02-22 10:09:49,474 [// - ?]  [li.bryt.tools.activiti_image_server.services.ApplicationService] -init
+2018-02-22 10:09:49,482 [// - ?]  [li.bryt.tools.activiti_image_server.modules.FooModule] -return ok='{
+   "url": "http://foo.oriente.com"
+}'
+2018-02-22 10:09:49,484 [// - ?]  [li.bryt.tools.activiti_image_server.services.ApplicationService] -destroy
