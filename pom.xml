@@ -25,24 +25,6 @@
 		<tomcat.password>password@oriente</tomcat.password>
 	</properties>
 
-	<!-- repositories address -->
-	<repositories>
-		<repository>
-			<id>nexus</id>
-			<name>Oriente Team Nexus Repository</name>
-			<url>http://nexus.oriente.com.ph/nexus/content/groups/public</url>
-		</repository>
-	</repositories>
-
-	<!-- pluginRepositories address -->
-	<pluginRepositories>
-		<pluginRepository>
-			<id>nexus</id>
-			<name>Oriente Team Nexus Repository</name>
-			<url>http://nexus.oriente.com.ph/nexus/content/groups/public</url>
-		</pluginRepository>
-	</pluginRepositories>
-
 	<dependencies>
 		<!-- nutz -->
 		<dependency>
