@@ -29,8 +29,9 @@ public class ImageService {
 		this.LOG = Logs.get();
 	}
 	
-	public Object deployFromUrlReturnImage(String name, String src) {
+	public Object deployFromUrlReturnImage(String src) {
 		try {
+			String name = src.substring(src.lastIndexOf("/")+1);
 			LOG.debugf("name=%s&src=%s",name,src);
 			RepositoryService repositoryService = this.appService.getEngine().getRepositoryService();
 			URL website = new URL(src);

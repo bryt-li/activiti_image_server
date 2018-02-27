@@ -19,8 +19,8 @@ public class ImageModule extends baseModule {
 
 	@At("/proxy")
 	@Ok("raw:png")
-	public Object getImage(String name, String src) throws Exception {
-		return imageService.deployFromUrlReturnImage(name, src);
+	public Object getImage(String src) throws Exception {
+		return imageService.deployFromUrlReturnImage(src);
 	}
 
 }
