@@ -29,7 +29,7 @@ public class ImageModule extends baseModule {
 
 	@At("/url")
 	@Ok("raw:png")
-	public Object getUrl(String src) throws Exception {
+	public Object url(String src) throws Exception {
 		return imageService.deployFromUrlReturnImage(src);
 	}
 

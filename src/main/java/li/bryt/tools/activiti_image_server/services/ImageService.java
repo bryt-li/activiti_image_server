@@ -39,12 +39,10 @@ public class ImageService {
 	
 	public Object deployFromUrlReturnImage(String src) {
 		try {
-			String name = src.substring(src.lastIndexOf("/")+1);
-			LOG.debugf("name=%s&src=%s",name,src);
 			RepositoryService repositoryService = this.appService.getEngine().getRepositoryService();
 			URL website = new URL(src);
 			InputStream in = website.openStream();
-			Deployment deploy = repositoryService.createDeployment().addInputStream(name, in).deploy();
+			Deployment deploy = repositoryService.createDeployment().addInputStream("tmp.bpmn", in).deploy();
 			ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery().deploymentId(deploy.getId()).singleResult();
 			BpmnModel bpmnModel = repositoryService.getBpmnModel(processDefinition.getId());
 			InputStream imageStream = new DefaultProcessDiagramGenerator().generatePngDiagram(bpmnModel);

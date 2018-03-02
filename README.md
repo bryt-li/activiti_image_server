@@ -2,23 +2,32 @@
 
 Deploy BPMN model from http URL and render image.
 
-Requires JDK1.8
+## Build
+	cd activiti_image_server
+	docker build -t activiti_image_server .
 
-	mvn tomcat7:run
-	# http://localhost:9000/activiti_image_server/version
+## Run
+	docker run -p 9000:9000 activiti_image_server
+
+## Usage
 	
-	mvn jetty:run
-	@ http://localhost:8080/version
-	
-	mvn tomcat7:deploy
-	mvn tomcat7:undeploy
-	mvn tomcat7:redeploy
+### Post embeded activiti xml
 
+Please modify dist/plantuml.js to meet your own requirement.
 
-	mvn test
-		
 ```
-![Activiti Example](http://uml.oriente.com.ph/activiti_image_server/proxy?name=FooProcess.bpmn&src=https://bryt-li.github.io/bpmn/FooProcess.bpmn)
+<script src="/dist/plantuml.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  enablePlantUML('{{ site.plantuml_host }}');
+});
+</script>
+
 ```
 
-![Activiti Example](http://uml.oriente.com.ph/activiti_image_server/proxy?name=FooProcess.bpmn&src=https://bryt-li.github.io/bpmn/FooProcess.bpmn)
+### Extenal URL bpmn file
+
+```
+![Activiti Example](http://servername/url?src=https://bryt-li.github.io/bpmn/FooProcess.bpmn)
+```
