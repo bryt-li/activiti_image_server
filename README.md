@@ -8,7 +8,7 @@ Deploy BPMN model from http URL and render image.
 	docker build -t activiti_image_server .
 
 ## Run
-	docker run -p 8080:8080 activiti_image_server
+	docker run -p 9901:8080 activiti_image_server
 
 ## Usage
 	
