@@ -4,6 +4,7 @@ Deploy BPMN model from http URL and render image.
 
 ## Build
 	cd activiti_image_server
+	mvn package
 	docker build -t activiti_image_server .
 
 ## Run
