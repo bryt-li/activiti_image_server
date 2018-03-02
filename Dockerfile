@@ -14,5 +14,8 @@ ENV MAVEN_HOME /usr/share/maven
 
 VOLUME /root/.m2
 
+RUN mvn package
+RUN mvn tomcat7:help
+RUN mvn jetty:help
 
 CMD ["mvn","tomcat7:run"]
